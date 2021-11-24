@@ -14,7 +14,11 @@ export function Home() {
   //com o translucent, o header começa "embaixo" da status bar
   return (
     <Container>
-      <StatusBar barStyle="light-content" />
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
       <Header>
         <HeaderContent>
           <Logo width={RFValue(108)} height={RFValue(12)} />
