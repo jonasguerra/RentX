@@ -2,8 +2,9 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import Logo from '../../assets/logo.svg';
-import { Car } from '../../components/Car';
+import { Car, CarData } from '../../components/Car';
 import {
+  CarList,
   Container,
   Header,
   HeaderContent,
@@ -11,6 +12,17 @@ import {
 } from './styles';
 
 export function Home() {
+  const carData: CarData = {
+    brand: 'Audi',
+    name: 'RS 5 COUPE',
+    rent: {
+      period: 'Daily',
+      price: 120.0,
+    },
+    thumbnail:
+      'https://th.bing.com/th/id/OIP.CIf5vTpXc9cU0d8l2QcmIgHaEL?pid=ImgDet&rs=1',
+  };
+
   //com o translucent, o header começa "embaixo" da status bar
   return (
     <Container>
@@ -25,7 +37,11 @@ export function Home() {
           <TotalCars>Total de 12 carros</TotalCars>
         </HeaderContent>
       </Header>
-      <Car />
+      <CarList
+        data={[1, 2, 3, 4, 5, 6, 7]}
+        keyExtractor={(item) => String(item)}
+        renderItem={({ item }) => <Car data={carData} />}
+      />
     </Container>
   );
 }
