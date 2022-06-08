@@ -1,7 +1,7 @@
 import MaterialIcon from '@expo/vector-icons/MaterialIcons';
 import React from 'react';
 import { BorderlessButtonProps } from 'react-native-gesture-handler';
-import theme from '../styles/theme';
+import theme from '../../styles/theme';
 import { Container } from './styles';
 
 //extendo as propriedades do borderlessButton que é o meu "Container"
