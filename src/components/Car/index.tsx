@@ -1,5 +1,5 @@
-import React from 'react';
-import GasolineSvg from '../../assets/gasoline.svg';
+import React from "react";
+import GasolineSvg from "../../assets/gasoline.svg";
 import {
   About,
   Brand,
@@ -11,7 +11,7 @@ import {
   Price,
   Rent,
   Type,
-} from './styles';
+} from "./styles";
 
 export interface CarData {
   brand: string;
@@ -49,7 +49,7 @@ export function Car({ data }: Props) {
           uri: data.thumbnail,
         }}
         resizeMode="contain"
-      ></CarImage>
+      />
     </Container>
   );
 }
